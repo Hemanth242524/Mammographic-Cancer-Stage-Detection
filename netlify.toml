@@ -1,0 +1,24 @@
+[build]
+  command = "echo 'No build step needed for static site'"
+  publish = "public"
+
+[build.environment]
+  PYTHON_VERSION = "3.11"
+
+[functions]
+  directory = "netlify/functions"
+  included_files = ["utils/**", "configs/**"]
+
+# Redirect all API calls to functions
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# SPA fallback
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+

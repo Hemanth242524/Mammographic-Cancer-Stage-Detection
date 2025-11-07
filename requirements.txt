@@ -1,0 +1,12 @@
+Flask==3.0.0
+Werkzeug==3.0.1
+tensorflow>=2.20.0
+opencv-python==4.8.1.78
+numpy==1.24.3
+Pillow>=10.0.0
+PyYAML>=6.0.0
+# segmentation-models==1.0.1  # Optional: Incompatible with TensorFlow 2.20+. App will use fallback model.
+scikit-image>=0.22.0
+pandas>=2.0.0
+scikit-learn>=1.3.0
+
